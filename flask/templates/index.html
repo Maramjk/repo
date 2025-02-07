@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEATHER Prediction</title>
+    
+</head>
+<body>
+    <h2>Enter Data for predicted Weather</h2>
+    <form method="post">
+        <label>Precipitation:</label>
+        <input type="text" name="precipitation"><br>
+
+        <label>Temp Max:</label>
+        <input type="text" name="temp_max"><br>
+
+        <label>Temp Min:</label>
+        <input type="text" name="temp_min"><br>
+
+        <label>Wind:</label>
+        <input type="text" name="wind"><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction is not none %}
+        <h2>prediction: {{ prediction }}</h2>
+    {% endif %}
+
+</body>
+</html>
